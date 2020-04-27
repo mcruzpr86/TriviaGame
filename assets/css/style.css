@@ -1,0 +1,40 @@
+body {
+    background-image: url("../images/JgbAUV.jpg");
+}
+
+#home {
+    text-align: center;
+}
+
+.img-fluid {
+    padding-top: -10px;
+    width: 550px;
+}
+
+.position {
+    padding-top: -20px;
+    margin-top: -80px;
+}
+.font-color {
+    color: #fff;
+}
+
+.tableheight {
+    height: 500px;
+}
+
+.container {
+    margin-bottom: 10px;
+}
+
+.btn, .reset {
+    color: green;
+    background:white;
+    margin-top: 5px;
+}
+
+#keyboard {
+    color: green;
+}
+
+

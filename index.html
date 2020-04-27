@@ -5,17 +5,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!--Reset CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Stylesheet link-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>Hello, world!</title>
+     <!--Javascript
+  <script src="assets/javascript/game.js"></script>-->
+
+    <title>TMNT Trivia Game</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body id="home">
+    <!--<div class="jumbotron jumbotron-fluid bg-dark" id="home">-->
+      <!--Header-->
+      <header>
+        <div class="container bg-darl">
+          <img src="assets/images/hiclipart.com.png" class="img-fluid" width="500px" alt="Responsive image">
+           <div class="position">
+               
+            <a href="https://fontmeme.com/tmnt-font/"><img src="https://fontmeme.com/permalink/200427/d51b5ab963ab77167909a935d9402ac9.png" alt="tmnt-font" border="0"></a>
+              
+          <br>
+          <br>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    
-  </body>
+          <a href="https://fontmeme.com/fonts/retro-gaming-font/"><img src="https://fontmeme.com/permalink/200427/ca4260112d39c4995560a01401a25792.png" alt="retro-gaming-font" border="0"></a>
+
+          </div>
+          
+        </div>
+        
+      </header>  
+<br>
+     
+
+      <div>
+        <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="500px" alt="Responsive image" >
+     
+       </div>
+
+       <div class="container">
+        <h1 class="text-center ">Guess all the questions correct to win</h1>
+        
+        <div class="text-center">
+          <p id="wordSpotlight">TRIVIA questions</p>
+          <div id="keyboard"></div>
+          <button type="button" class="btn btn-success" onClick="reset()">Reset</button>
+         <!-- <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>-->
+        </div> 
+      </div>
+
+ 
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+ </body>
+
 </html>
+
+
+
+
+
