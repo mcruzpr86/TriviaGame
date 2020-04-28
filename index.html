@@ -12,8 +12,6 @@
     <!--Stylesheet link-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-     <!--Javascript-->
-  <script src="assets/javascript/app.js"></script>
 
     <title>TMNT Trivia Game</title>
   </head>
@@ -45,72 +43,18 @@
      
        </div>
 
-       <div class="container">
-        <h1 class="text-center ">Guess all the questions correct to win</h1>
-        
-        <div class="text-center">
-          <p id="wordSpotlight">TRIVIA questions:</p>
-          <form action="/action_page.php">
-            <p>Who is the leader of the group:</p>
-            <input type="radio" id="leo" name="Leonardo" value="leo">
-            <label for="leo">Leonardo</label>
-            <input type="radio" id="splinter" name="masterSplinter" value="splinter">
-            <label for="female">Master Splinter</label>
-            <input type="radio" id="April" name="AprilOneil" value="April">
-            <label for="other">April Oneil</label>
-            <input type="radio" id="mikey" name="Michalengelo" value="mikey">
-            <label for="leo">Michalengelo</label>
+       <br>
 
-            <br>
-            <br>
-            
-            <div class="text-center">
-              
-              <form action="/action_page.php">
-                <p>Who is the leader of the group:</p>
-                <input type="radio" id="leo" name="Leonardo" value="leo">
-                <label for="leo">Leonardo</label>
-                <input type="radio" id="splinter" name="masterSplinter" value="splinter">
-                <label for="female">Master Splinter</label>
-                <input type="radio" id="April" name="AprilOneil" value="April">
-                <label for="other">April Oneil</label>
-                <input type="radio" id="mikey" name="Michalengelo" value="mikey">
-                <label for="leo">Michalengelo</label>
-    
-                <br>
-                <br>
-                
-                <div class="text-center">
-                  
-                  <form action="/action_page.php">
-                    <p>Who is the leader of the group:</p>
-                    <input type="radio" id="leo" name="Leonardo" value="leo">
-                    <label for="leo">Leonardo</label>
-                    <input type="radio" id="splinter" name="masterSplinter" value="splinter">
-                    <label for="female">Master Splinter</label>
-                    <input type="radio" id="April" name="AprilOneil" value="April">
-                    <label for="other">April Oneil</label>
-                    <input type="radio" id="mikey" name="Michalengelo" value="mikey">
-                    <label for="leo">Michalengelo</label>
+       <div class="container" id='container'>
+          <button id="start">
+            Start
+          </button>
         
-                    <br>
-                    <br>
+       </div>
 
-                    <div class="text-center">
-                      
-                      <form action="/action_page.php">
-                        <p>Who is the leader of the group:</p>
-                        <input type="radio" id="leo" name="Leonardo" value="leo">
-                        <label for="leo">Leonardo</label>
-                        <input type="radio" id="splinter" name="masterSplinter" value="splinter">
-                        <label for="female">Master Splinter</label>
-                        <input type="radio" id="April" name="AprilOneil" value="April">
-                        <label for="other">April Oneil</label>
-                        <input type="radio" id="mikey" name="Michalengelo" value="mikey">
-                        <label for="leo">Michalengelo</label>
-            
-                        <br>
-                        <br>
+                        <button type="button" class="btn btn-success">Submit</button>
+
+                        
           
           <button type="button" class="btn btn-success" onClick="reset()">Reset</button>
          <!-- <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>-->
@@ -120,6 +64,9 @@
  
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <!--Javascript-->
+  <script src="assets/javascript/app.js"></script>
 
  </body>
 
