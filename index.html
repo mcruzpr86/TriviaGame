@@ -41,7 +41,7 @@
      
 
       <div>
-        <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="500px" alt="Responsive image" >
+        <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="400px" alt="Responsive image" >
      
        </div>
 
@@ -49,8 +49,20 @@
         <h1 class="text-center ">Guess all the questions correct to win</h1>
         
         <div class="text-center">
-          <p id="wordSpotlight">TRIVIA questions</p>
-          <div id="keyboard"></div>
+          <p id="wordSpotlight">TRIVIA questions:</p>
+          <form action="/action_page.php">
+            <p>Who is the leader of the group:</p>
+            <input type="radio" id="leo" name="Leonardo" value="leo">
+            <label for="leo">Leonardo</label>
+            <input type="radio" id="splinter" name="masterSplinter" value="splinter">
+            <label for="female">Master Splinter</label>
+            <input type="radio" id="April" name="AprilOneil" value="April">
+            <label for="other">April Oneil</label>
+            <input type="radio" id="mikey" name="Michalengelo" value="mikey">
+            <label for="leo">Michalengelo</label>
+
+            <br>
+          
           <button type="button" class="btn btn-success" onClick="reset()">Reset</button>
          <!-- <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>-->
         </div> 
