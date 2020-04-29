@@ -1,7 +1,7 @@
 //JavaScript
     
    
-    var correct;
+    let correct;
     let incorrect;
     let timer;
 
@@ -13,18 +13,18 @@
         },
         {
             Question: "The happy go lucky dude that loves pizza is",
-            Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
-            correctAnswer: 'Master Splinter',
+            Answers: ['Leonardo', 'Master Splinter', 'Donatello', 'Michaelangelo'],
+            correctAnswer: 'Michaelangelo',
         },
         {
-            Question: "Whos is the leader of the group",
-            Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
-            correctAnswer: 'Master Splinter',
+            Question: "Who is the turtles worst enemy",
+            Answers: ['Foot Soldier Clan', 'Shredder', 'April Oneil', 'Raphael'],
+            correctAnswer: 'Shredder',
         },
         {
-            Question: "Whos is the leader of the group",
-            Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
-            correctAnswer: 'Master Splinter',
+            Question: "What transformed the turtles into Teenage Muntant Ninja Turtles",
+            Answers: ['Ooze', 'Microwaved Pizza', 'Slime', 'radiation'],
+            correctAnswer: 'Ooze',
         },
     ]
 
@@ -56,9 +56,17 @@ function start() {
         '<h2>Time Remaining</h2><span id= "timer">120</span>'
     )
     $('#start').remove()
+
+    function questions() {
+        console.log ('questions')
+    }
+    $('#questions').prepend(
+        '<span id= "questions"></span>'
+    )
 }
 
-//hide time and questions prior to game starting
+questions()
+
 
  
 

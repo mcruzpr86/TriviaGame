@@ -27,10 +27,11 @@ body {
     margin-bottom: 10px;
 }
 
-.btn, .reset {
+#start {
     color: green;
     background:white;
     margin-top: 5px;
+    font-size: 50px;
 }
 
 #keyboard {
