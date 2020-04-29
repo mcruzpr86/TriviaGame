@@ -56,18 +56,3 @@ function start() {
         '<h2>Time Remaining</h2><span id= "timer">120</span>'
     )
     $('#start').remove()
-
-    function questions() {
-        console.log ('questions')
-    }
-    $('#questions').prepend(
-        '<span id= "questions"></span>'
-    )
-}
-
-questions()
-
-
- 
-
-    
