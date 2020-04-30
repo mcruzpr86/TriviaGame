@@ -5,11 +5,18 @@
     let incorrect;
     let timer;
 
-    let questions = [
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const submitButton = document.getElementById('submit');
+
+    let myQuestions = [
         {
             Question: "Whos is the leader of the group",
-            Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
-            correctAnswer: 'Master Splinter',
+            choiceA: 'Leonardo',
+            choiceB: 'Master Splinter',
+            choiceC:'April Oneil',
+            choiceD: 'Michaelangelo',
+            correctAnswer: 'B',
         },
         {
             Question: "The happy go lucky dude that loves pizza is",
@@ -27,6 +34,9 @@
             correctAnswer: 'Ooze',
         },
     ]
+
+
+
 
 
 //start button
@@ -54,5 +64,80 @@ function start() {
     }
     $('#container').prepend(
         '<h2>Time Remaining</h2><span id= "timer">120</span>'
+        
     )
     $('#start').remove()
+
+
+
+        // render a question 
+        //TEST (not working)
+function renderQuestion(){
+  let q = myQuestions[runningQuestion];
+  
+  myQuestion.innerHTML = "<p>"+ q.question +"</p>";
+ 
+  choiceA.innerHTML = q.choiceA;
+  choiceB.innerHTML = q.choiceB;
+  choiceC.innerHTML = q.choiceC;
+  choiceD.innerHTML = q.choiceD;
+}
+
+start.addEventListener("click",start);
+
+
+
+
+
+
+
+    ///////
+
+
+    function buildQuiz(){
+        // variable to store the HTML output
+        const output = [];
+      
+        // for each question...
+        myQuestions.forEach(
+          (currentQuestion, questionNumber) => {
+      
+            // variable to store the list of possible answers
+            const answers = [];
+      
+            // and for each available answer...
+            for(letter in currentQuestion.answers){
+      
+              // ...add an HTML radio button
+              answers.push(
+                `<label>
+                  <input type="radio" name="question${questionNumber}" value="${letter}">
+                  ${letter} :
+                  ${currentQuestion.answers[letter]}
+                </label>`
+              );
+            }
+      
+            // add this question and its answers to the output
+            output.push(
+              `<div class="question"> ${currentQuestion.question} </div>
+              <div class="answers"> ${answers.join('')} </div>`
+            );
+          }
+        );
+      
+        // finally combine our output list into one string of HTML and put it on the page
+        quizContainer.innerHTML = output.join('');
+      }
+    
+      myQuestions.forEach( (currentQuestion, questionNumber) => {
+        // the code we want to run for each question goes here
+      });
+    
+    
+     
+    
+        
+    
+}
+
