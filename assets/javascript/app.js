@@ -1,9 +1,11 @@
+//$(document).ready(function(){
 //TriviaGame
     
     let correct;
     let incorrect;
     let timer;
     let intervalID;
+    let unanswerCount;
     let indexQandA = 0; //index to load a different question each round without the game reset or screen refresh
     let answered = false; //variable to stop the timer if user has clicked an answer
     let correctAnswers= 0;
@@ -41,61 +43,62 @@ $(document).on('click', '#start', function(){
 function start() {
     correct = 0;
     incorrect = 0;
-    timer = 120;
+    timer = 5;
     correctAnswers = 0;
     incorrectAnswers = 0;
-    loadQandA();
+    unanswerCount = 0;
+    setInterval(timer);
+  
+    //loadQandA();
 
     setInterval(() => {
        timer -- 
-       if (timer == 0) {
+       if (timer === 0) {
+          unanswerCount++;
           gameDone()
-          console.log('game finished')  
+          stop()
+          clearInterval(timer);
+          
+          //console.log('game finished')  
        }
     $('#timer').html(timer)
     }, 1000);
     
-    function gameDone() {
-        console.log('end game')
-    }
     
+    function gameDone() {
+        
+        clearInterval(setInterval);
+        //console.log('end game')
+    }
+
+      //stop timer if reach 0
+      
     $('#container').prepend(
         '<h4>Time Remaining</h4><span id= "timer">120</span>'
-        
+        )
+
+    $('#questions').prepend(
+      '<h4> Questions: </h4><span> </span>'
     )
+
     $('#start').remove()
+
+    $('#previous').click(function(){
+     
+     })
+
+
+
+    //time stop
+    //function stop() {
+    //  running = false;
+    //  clearInterval(interval);
+   // }
     
-    }  
+/////clearInterval()
+//stop()
+ 
 
 //Loading the questions
-
-function loadQandA() {
-  answered = false; // will allow timeRemaining to be pushed back to <h5> after round reset....else statement in function timer()
-      timeRemaining = 16;
-      intervalID = setInterval(timer, 1000);
-      if (answered === false) {
-        timer();
-}
-  correct = triviaGame[indexQandA].correct;
-  let question = triviaGame[indexQandA].question;
-  $('#question').html(question);
-  for (let i = 0; i < 4; i++) {
-      let answer = triviaGame[indexQandA].answer[i];
-      $('#answers').append('<h4 class= answersAll id=' + i + '>' + answer + '</h4>');
   }
-
-  $("h4").click(function () {
-      let id = $(this).attr('id');
-      if (id === correct) {
-          answered = true; // stops the timer
-          $('#question').text("THE ANSWER IS: " + triviaGame[indexQandA].answer[correct]);
-          correctAnswer();
-      } else {
-          answered = true; //stops the timer
-          $('#question').text("YOU CHOSE: " + triviaGame[indexQandA].answer[id] + ".....HOWEVER THE ANSWER IS: " + triviaGame[indexQandA].answer[correct]);
-          incorrectAnswer();
-      }
-  });
-}
-
-
+//}) end of document ready
