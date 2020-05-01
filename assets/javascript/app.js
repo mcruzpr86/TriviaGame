@@ -90,13 +90,13 @@ function start() {
 
 
     //time stop
-    //function stop() {
-    //  running = false;
-    //  clearInterval(interval);
-   // }
+    function stop() {
+     running = false;
+      clearInterval(start);
+    }
     
-/////clearInterval()
-//stop()
+clearInterval(start);
+stop();
  
 
 //Loading the questions
