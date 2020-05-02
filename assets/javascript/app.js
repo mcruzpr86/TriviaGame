@@ -85,11 +85,7 @@ function gameDone() {
   
 $('#container').prepend(
     '<h4>Time Remaining</h4><span id= "timer">120</span>'
-    )
-
-$('#questions').prepend(
-  '<h4> Questions: </h4><span> </span>'
-)
+    );
 
 $('#start').remove()
 
