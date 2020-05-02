@@ -15,76 +15,66 @@
 
     <title>TMNT Trivia Game</title>
   </head>
-  <body id="home">
+    <body id="home">
 
-    <div class="main-body">
-      <div class="container">
-      <!--Header-->
-      <header>
-        <div class="container bg-darl">
-          <img src="assets/images/hiclipart.com.png" class="img-fluid" width="500px" alt="Responsive image">
-           <div class="position">
-               
-            <a href="https://fontmeme.com/tmnt-font/"><img src="https://fontmeme.com/permalink/200427/d51b5ab963ab77167909a935d9402ac9.png" alt="tmnt-font" border="0"></a>
-              
-          <br>
-          <br>
-
-          <a href="https://fontmeme.com/fonts/retro-gaming-font/"><img src="https://fontmeme.com/permalink/200427/ca4260112d39c4995560a01401a25792.png" alt="retro-gaming-font" border="0"></a>
-
-          </div>
+      <div class="main-body">
+        <div class="container">
+        <!--Header-->
+        <header>
+          <div class="container bg-darl">
+            <img src="assets/images/hiclipart.com.png" class="img-fluid" width="500px" alt="Responsive image">
+              <div class="position">
+                <a href="https://fontmeme.com/tmnt-font/"><img src="https://fontmeme.com/permalink/200427/d51b5ab963ab77167909a935d9402ac9.png" alt="tmnt-font" border="0"></a>
+                  <br>
+                  <br>
+                <a href="https://fontmeme.com/fonts/retro-gaming-font/"><img src="https://fontmeme.com/permalink/200427/ca4260112d39c4995560a01401a25792.png" alt="retro-gaming-font" border="0"></a>
+              </div>
           
-        </div>
-        
-      </header>  
-<br>
-     
-
-      <div>
-        <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="400px" alt="Responsive image" >
-     
-       </div>
-
-       <br>
-
-       <div class="container" id='container'>
-        <div class="quiz-area">
-          <button type="button" id="start" class="btn">
-            <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-            Start
-          </button>
-          <div class="timer-area">
-            <span class="countdown"></span>
-        </div>
-        <div class="results">
-            <div class="scoreboard">
-                <div class="correct">Correct<div class="numCorrect"></div>
-                </div>
-                <div class="incorrect">Incorrect<div class="numIncorrect"></div>
-                </div>
+          </div>
+        </header>  
+          <br>
+            <div>
+              <img src="assets/images/Teenage_Mutant_Ninja_Turtles.jpg" class="hintPics" width="400px" alt="Responsive image" >
             </div>
-            <button type="button" class="retry btn">Retry</button> 
+          <br>
+         <div class="container" id='container'>
+          <div class="quiz-area" id="quiz">
+            <button type="button" id="start" class="btn">
+              <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+              Start Dude!
+            </button>
+              <div class="timer-area">
+                <span class="countdown"></span>
+              </div>
+                <div class="results">
+                  <div class="scoreboard">
+                    <div class="correct">
+                      Correct:
+                      <div class="numCorrect"></div>
+                    </div>
+                  <div class="incorrect">
+                    Incorrect:
+                    <div class="numIncorrect"></div>
+                  </div>
+                </div>
+                <button id="submit" type="button" class="Submit btn">Submit</button> <br>
+                <button id="results" type="button" class="retry btn">Retry</button> 
+            </div>
+          </div>
         </div>
 
-         
+        </div>
 
-        
-         <!--- <div id="answers"></div> -->
+      
 
-         
-        
-       </div>
        <!--
-                        <button type="button" class="btn btn-success">Submit</button>
+                       <button type="button" class="btn btn-success">Submit</button>
 
                         
           
           <button type="button" class="btn btn-success" onClick="reset()">Reset</button>
        <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div> -->
-      </div>
-      </div> 
-      </div>
-    </div>
+      
  
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
