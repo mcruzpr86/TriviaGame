@@ -33,6 +33,11 @@ let myQuestions = [
         Answer: ['Ooze', 'Microwaved Pizza', 'Slime', 'radiation'],
         correct: 'Ooze',
     },
+    {
+        Questions: "Who is the coder of the crew",
+        Answer: ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'],
+        correct: 'Donatello',
+    },
 ]
 
 var quizContainer = document.getElementById('quiz-area');
@@ -89,7 +94,7 @@ $('#container').prepend(
 
 $('#start').remove()
 
-$('#previous').click(function(){
+//$('#previous').click(function(){
  
 
 
@@ -171,6 +176,7 @@ function showQuestions(questions, quizContainer){
         showResults(questions, quizContainer, resultsContainer);
     }
 
-})
-}
-}
+}}
+//)
+//}
+//}
