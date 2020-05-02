@@ -12,7 +12,7 @@ let correctAnswers= 0;
 let incorrectAnswers= 0;
 
 //let output = [];
-let questions = [
+let myQuestions = [
     {
        Questions: "Whos is the leader of the group",
        Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
@@ -39,13 +39,13 @@ var quizContainer = document.getElementById('quiz-area');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-generateQuiz(questions, quizContainer, resultsContainer, submitButton);
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 //start button
 
-$(document).on('click', '#start', function(){
+$(document).on('click', '#start', 'myQuestions', function(){
 start();
 })
 
@@ -53,7 +53,7 @@ function start() {
 correct = 0;
 incorrect = 0;
 timer = 5;
-questions;
+myQuestions;
 correctAnswers = 0;
 incorrectAnswers = 0;
 unanswerCount = 0;
@@ -66,7 +66,7 @@ setInterval(() => {
    if (timer === 0) {
       unanswerCount++;
       gameDone()
-      stop()
+      //stop()
       clearInterval(timer);
       
       //console.log('game finished')  
@@ -95,17 +95,17 @@ $('#previous').click(function(){
 
 function showQuestions(questions, quizContainer){
         // we'll need a place to store the output and the answer choices
-        var output = [];
-        var answers;
+        let output = [];
+        let answers;
 
         // for each question...
-        for(var i=0; i<questions.length; i++){
+        for(let i=0; i<myQuestions.length; i++){
             
             // first reset the list of answers
             answers = [];
 
             // for each available answer...
-            for(letter in questions[i].answers){
+            for(letter in myQuestions[i].answers){
 
                 // ...add an html radio button
                 answers.push(

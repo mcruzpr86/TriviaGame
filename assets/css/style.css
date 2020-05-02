@@ -75,7 +75,7 @@ body {
 #submit-btn {
     background-color: #FFF;
     border: none;
-    color: #eb8ba6;
+    color: green;
     text-align: center;
     text-decoration: none;
     font-size: 40px;
@@ -99,7 +99,7 @@ body {
 
 .btn.next {
     background-color: #FFF;
-    border: 3px solid #eb8ba6;
+    border: 3px solid green;
     border-radius: 3px;
     color: #3a393f;
     font-size: 14px;
