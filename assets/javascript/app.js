@@ -93,11 +93,10 @@ $('#timer').html(timer)
 
 function gameDone() {
     
-  //  clearInterval(setInterval);
-    //console.log('end game')
+  
 }
 
-  //stop timer if reach 0
+  
   
 $('#container').prepend(
     '<h4>Time Remaining</h4><span id= "timer">100</span>'
@@ -110,7 +109,7 @@ $('#previous').click(function(){
 
 })
 }}
-//Create a loop to simplyfi this funtion
+//Create a loop to simplify this function
 function showQuestions() {
     for(let i = 0; i < myQuestions.length; i++) {
        var questionDiv = $('<div>')
@@ -132,13 +131,13 @@ function showQuestions() {
  }   
  
  
- 
+
 
 }
 
 /*
 
-//The following functions are meant to show results though I could not get it to work
+//The following functions are meant to show results once the time is up but I could not get it to work
 
 function showResults(questions, quizContainer, resultsContainer){
     
