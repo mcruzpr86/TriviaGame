@@ -47,6 +47,8 @@ var submitButton = $('#submit');
 
 $("#submit").hide()
 $("#retry").hide()
+$(".results").hide()
+
 
 generateQuiz();
 
@@ -104,6 +106,8 @@ $('#container').prepend(
 
 $('#start').hide()
 
+$(".results").show()
+
 $('#previous').click(function(){
  
 
@@ -129,7 +133,7 @@ function showQuestions() {
 
     
  }   
- 
+
  
 
 
