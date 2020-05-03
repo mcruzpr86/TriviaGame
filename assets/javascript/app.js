@@ -15,12 +15,12 @@ let incorrectAnswers= 0;
 let myQuestions = [
     {
        Questions: "Whos is the leader of the group",
-       Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Michaelangelo'],
+       Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Krang'],
        correct: 'Master Splinter',
     },
     {
         Questions: "The happy go lucky dude that loves pizza is",
-        Answers: ['Leonardo', 'Master Splinter', 'Donatello', 'Michaelangelo'],
+        Answers: ['Casey Jones', 'Master Splinter', 'Donatello', 'Michaelangelo'],
         correct: 'Michaelangelo',
     },
     {
@@ -109,28 +109,23 @@ $('#previous').click(function(){
 
 })
 }}
-
+//Create a loop to simplyfi this funtion
 function showQuestions() {
-    for(let i=0; i<myQuestions.length; i++) {
+    for(let i = 0; i < myQuestions.length; i++) {
        var questionDiv = $('<div>')
        var askQuestion = $('<h4>').text(myQuestions[i].Questions)
        questionDiv.append(askQuestion)
-       var showAnswersA = $('<p>').html(myQuestions[i].Answers[0]) 
-       var showAnswersB = $('<p>').html(myQuestions[i].Answers[1])
-       var showAnswersC = $('<p>').html(myQuestions[i].Answers[2])
-       var showAnswersD = $('<p>').html(myQuestions[i].Answers[3])
+       var showAnswersA = $('<p>').html('<label>' + myQuestions[i].Answers[0] +' </label> <input name="'+ myQuestions[i].correct +'" type="radio">')
+       var showAnswersB = $('<p>').html('<label>' + myQuestions[i].Answers[1] +' </label> <input name="'+ myQuestions[i].correct +'" type="radio">')
+       var showAnswersC = $('<p>').html('<label>' + myQuestions[i].Answers[2] +' </label> <input name="'+ myQuestions[i].correct +'" type="radio">')
+       var showAnswersD = $('<p>').html('<label>' + myQuestions[i].Answers[3] +' </label> <input name="'+ myQuestions[i].correct +'" type="radio">')
        questionDiv.append(showAnswersA)
        questionDiv.append(showAnswersB)
        questionDiv.append(showAnswersC)
        questionDiv.append(showAnswersD)
 
 
-
-
-       $('#quiz').append(questionDiv)
-
-
-
+      $('#quiz').prepend(questionDiv)
 
  }   
 
