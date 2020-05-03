@@ -14,33 +14,34 @@ let incorrectAnswers= 0;
 //let output = [];
 let myQuestions = [
     {
-       Questions: "Whos is the leader of the group",
+       Questions: "Whos is the leader of the group?",
        Answers: ['Leonardo', 'Master Splinter', 'April Oneil', 'Krang'],
        correct: 'Master Splinter',
     },
     {
-        Questions: "The happy go lucky dude that loves pizza is",
+        Questions: "The happy go lucky dude that loves pizza is?",
         Answers: ['Casey Jones', 'Master Splinter', 'Donatello', 'Michaelangelo'],
         correct: 'Michaelangelo',
     },
     {
-        Questions: "Who is the turtles worst enemy",
+        Questions: "Who is the turtles worst enemy?",
         Answers: ['Foot Soldier Clan', 'Shredder', 'April Oneil', 'Raphael'],
         correct: 'Shredder',
     },
     {
-        Questions: "What transformed the turtles into Teenage Muntant Ninja Turtles",
+        Questions: "What transformed the turtles into Teenage Muntant Ninja Turtles?",
         Answers: ['Ooze', 'Microwaved Pizza', 'Slime', 'radiation'],
         correct: 'Ooze',
     },
     {
-        Questions: "Who is the coder of the crew",
+        Questions: "Who is the coder of the crew?",
         Answers: ['Leonardo', 'Raphael', 'Donatello', 'Michaelangelo'],
         correct: 'Donatello',
     },
 ]
 
 var quizContainer = $('#quiz-area');
+var answersContainer = $('#answers');
 var resultsContainer = $('#results');
 var submitButton = $('#submit');
 
@@ -62,7 +63,7 @@ $(document).on('click', '#start', 'myQuestions', function(){
 function start() {
 correct = 0;
 incorrect = 0;
-timer = 5;
+timer = 100;
 myQuestions;
 correctAnswers = 0;
 incorrectAnswers = 0;
@@ -99,7 +100,7 @@ function gameDone() {
   //stop timer if reach 0
   
 $('#container').prepend(
-    '<h4>Time Remaining</h4><span id= "timer">120</span>'
+    '<h4>Time Remaining</h4><span id= "timer">100</span>'
     );
 
 $('#start').hide()
@@ -127,45 +128,17 @@ function showQuestions() {
 
       $('#quiz').prepend(questionDiv)
 
+    
  }   
+ 
+ 
+ 
 
 }
 
-/*function showQuestions(questions, quizContainer){
-    // we'll need a place to store the output and the answer choices
-    let output = [];
-    let answers;
+/*
 
-    // for each question...
-    for(let i=0; i<myQuestions.length; i++){
-        
-        // first reset the list of answers
-        answers = [];
-        $('#quiz').html(myquestions[i])
-        // for each available answer...
-        /* for(letter in myQuestions[i].answers){
-
-            // ...add an html radio button
-            answers.push(
-                '<label>'
-                    + '<input type="radio" name="question'+ i +'" value="'+letter+'">'
-                    + letter + ': '
-                    + questions[i].answers[letter]
-                + '</label>'
-            );
-        } 
-
-        // add this question and its answers to the output
-        output.push(
-            '<div class="quiz-area">' + questions[i].join('') + '</div>'
-            + '<div class="answers">' + answers.join('') + '</div>'
-        );
-    }
-
-    // finally combine our output list into one string of html and put it on the page
-    quizContainer.innerHTML = output.join('');
-}
-
+//The following functions are meant to show results though I could not get it to work
 
 function showResults(questions, quizContainer, resultsContainer){
     
@@ -197,7 +170,7 @@ function showResults(questions, quizContainer, resultsContainer){
         }
     }
 
-    // show number of correct answers out of total
+    //show number of correct answers out of total
     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 
